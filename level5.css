@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* body {
+  font-family: sans-serif;
+  font-size: 35px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4vh;
+  padding: 4vh;
+}
+
+[class^="block-"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 4vh;
+}
+
+[class^="box-"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1vh solid #48CAE4;
+  border-radius: 10px;
+}
+
+.box-1, .box-5 {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 20vh;
+}
+
+.box-3 {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  height: 44vh;
+}
+
+.box-2, .box-4 {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+}
+
+@media (max-width: 500px) {
+  .block-2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 60vh;
+  }
+  .box-2 {
+    display: none;
+  }
+  .box-3 {
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+  }
+}
+/*# sourceMappingURL=level5.css.map */

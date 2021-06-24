@@ -1,0 +1,57 @@
+$gap:4vh;
+$padding : 4vh;
+$color: #48CAE4;
+//variable map
+$bp : (
+    mobile: 500px,
+    tablet : 768px,
+    desktop : 1440px
+);
+
+@mixin query($screen){
+    @each $key, $value in $bp {
+        @if($screen == $key){
+            @media (max-width: $value){
+                @content;
+            }
+        }
+    }
+}
+
+body{
+    font-family: sans-serif;
+    font-size: 35px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container{
+   display: flex;
+   flex-direction: row;
+   gap:$gap;
+   padding: $padding;
+   @include query(mobile){
+        flex-direction: column;
+}
+
+}
+[class ^="block-"]{
+    border: 1vh solid $color;
+    height: (100vh) - $padding*2 - $gap*2 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   @include query(mobile){
+       height: 50vh - $padding*2 - $gap*2;
+       border-radius: 10px;
+   }
+}
+//left
+.block-1{
+flex-grow: 2;
+}
+//right
+.block-2{
+flex-grow: 8;
+}
+//2+8 =10
